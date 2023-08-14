@@ -4,7 +4,7 @@
 | 名稱 | Windows快速鍵 | Mac快速鍵     |備註|
 | -------- | -------- | -------- |---|
 | 英文亂數假文    | lorem ,lorem+字數     | lorem ,lorem+字數     |
-| 中文亂數假文    | ctlorem,ctlorem+字數 |  ctlorem,ctlorem+字數  | 需外掛|
+| 中文亂數假文    | ctlorem,ctlorem+字數 |  ctlorem,ctlorem+字數  | 需(chinese lorem)|
 | 換行           | Alt + Z | Opt + Z |
 | 向下複製        | Alt + Shift + 下 | Opt + Shift + 下 |
 | 向上複製        | Alt + Shift + 上 | Opt + Shift + 上 |
