@@ -8,47 +8,48 @@
 <body>
     <form action="" method="post">
         <div>
-            <label for="">姓名</label>
-            <input type="text" id="" name="" value="">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" value="預設值">
         </div>
         <div>
-            <label for="">密碼</label>
-            <input type="password">
+            <label for="password">密碼</label>
+            <input type="password" name="password" id="password">
         </div>
         <div>
             <label for="">生日</label>
-            <input type="date">
+            <input type="date" name="birth">
         </div>
         <div>
             <label for="">EMAIL</label>
-            <input type="email">
+            <input type="email" name="email">
         </div>
         <div>
             <label for="">數量</label>
-            <input type="number">
+            <input type="number" name="number">
         </div>
         <div>
             <label for="">時間</label>
-            <input type="datetime-local">
+            <input type="datetime-local" name="time">
         </div>
         <div>
-            <label for="">性別</label>
+            <label for="gender">性別</label>
 
-            <input type="radio">
-            <label for="">男</label>
-            <input type="radio">
-            <label for="">女</label>
+            <input type="radio" name="gender" value="男" id="male">
+            <label for="male">男</label>
+
+            <input type="radio" name="gender" value="女" id="female">
+            <label for="female">女</label>
         </div>
         <div>
-            <label for="">多選</label>
+            <label for="multiSelect">多選</label>
 
-            <input type="checkbox">
-            <label for="">A</label>
-            <input type="checkbox">
+            <input type="checkbox" name="multiSelect" value="A" id="A">
+            <label for="A">A</label>
+            <input type="checkbox" name="multiSelect" value="B">
             <label for="">B</label>
-            <input type="checkbox">
+            <input type="checkbox" name="multiSelect" value="C">
             <label for="">C</label>
-            <input type="checkbox">
+            <input type="checkbox" name="multiSelect" value="D">
             <label for="">D</label>
         </div>
     </form>
