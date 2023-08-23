@@ -9,11 +9,26 @@
             width: 1200px;
             display: flex;
             flex-wrap: wrap;
+            flex-direction: row;
+            /* row, column, row-reverse, column-reverse */
+            /* flex-flow: wrap row; */
+
+            align-items: center;
+            /* 
+                start, center, end
+                stretch, baseline
+            */
+
+            justify-content: center;
+            /* 
+                start, center, end
+                space-between, space-around, space-evenly
+            */
 
             background-color: #ccc;
         }
         .box {
-            width: 300px;
+            width: 200px;
             /* margin:10px; */
             padding:10px;
 
@@ -22,23 +37,23 @@
 
         }
         .box:nth-of-type(odd){
-            /* background-color: #098; */
+            background-color: #098;
         }
         .box:nth-of-type(even){
-            /* background-color: #fa0; */
+            background-color: #fa0;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box">
-            <h2>title</h2>
+            <h1>title 1</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum in accusantium delectus architecto illum explicabo id, incidunt tempora sit temporibus dolores distinctio blanditiis recusandae assumenda repellat sunt. Autem, quasi culpa?
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 2</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum in accusantium delectus architecto illum explicabo id, incidunt tempora sit temporibus dolores distinctio blanditiis recusandae assumenda repellat sunt. Autem, quasi culpa?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum in accusantium delectus architecto illum explicabo id, incidunt tempora sit temporibus dolores distinctio blanditiis recusandae assumenda repellat sunt. Autem, quasi culpa?
@@ -46,14 +61,14 @@
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 3</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum in accusantium delectus architecto illum explicabo id, incidunt tempora sit temporibus dolores distinctio blanditiis recusandae assumenda repellat sunt. Autem, quasi culpa?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum in accusantium delectus architecto illum explicabo id, incidunt tempora sit temporibus dolores distinctio blanditiis recusandae assumenda repellat sunt. Autem, quasi culpa?
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 4</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum in accusantium delectus architecto illum explicabo id, incidunt tempora sit temporibus dolores distinctio blanditiis recusandae assumenda repellat sunt. Autem, quasi culpa?
             </p>
