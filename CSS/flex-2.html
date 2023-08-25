@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 1200px;
+            margin-inline:auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .box {
+            /* width: 300px; */
+            padding: 15px;
+
+            flex-basis: 300px;
+            /* 
+                flex-direction為row時，flex-basis表示寬度，且優先權大於width
+                flex-direction為column時，flex-basis表示高度，且優先權大於height
+            */
+            /* flex-grow: 1; */
+            /* 
+                flex-grow（延展）
+                預設值:0(沒有延展)
+            
+            */
+            flex-shrink: 10;
+            /* 
+                flex-shrink（壓縮）
+                預設值:1(有壓縮，但是會跟換行(flex-wrap:wrap)衝突)
+            */
+        }
+        /* .box:nth-of-type(1){flex-grow:3} */
+        /*150*/
+        /* .box:nth-of-type(2){flex-grow:2} */
+        /* 100 */
+        /* .box:nth-of-type(3){flex-grow:1} */
+        /* 50 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error et modi quia molestias autem beatae est impedit quod, aperiam ad ratione omnis tempore, iste repellat odit voluptatem blanditiis, consequatur quo!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error et modi quia molestias autem beatae est impedit quod, aperiam ad ratione omnis tempore, iste repellat odit voluptatem blanditiis, consequatur quo!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error et modi quia molestias autem beatae est impedit quod, aperiam ad ratione omnis tempore, iste repellat odit voluptatem blanditiis, consequatur quo!
+            </p>
+        </div>
+        <!-- <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error et modi quia molestias autem beatae est impedit quod, aperiam ad ratione omnis tempore, iste repellat odit voluptatem blanditiis, consequatur quo!
+            </p>
+        </div> -->
+    </div>
+</body>
+</html>
