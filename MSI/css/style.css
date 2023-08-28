@@ -18,5 +18,21 @@ nav {
     gap:30px;
 }
 .nav-logo i {
-    font-size: 64px;
+    font-size: 36px;
+}
+.nav-link {
+    font-weight: bold;
+    color: #303030;
+}
+
+header {
+    width: 100%;
+    /* aspect-ratio: 21 / 9; */
+    /* height: 450px; */
+    min-height:450px;
+    background-color: #ccc;
+}
+header img {
+    height: 100%;
+    object-fit: cover;
 }
