@@ -27,9 +27,10 @@ nav {
 
 header {
     width: 100%;
-    /* aspect-ratio: 21 / 9; */
+    aspect-ratio: 21 / 9;
     /* height: 450px; */
-    min-height:450px;
+    max-height:450px;
+    /* min-height:450px; */
     background-color: #ccc;
 }
 header img {
