@@ -10,3 +10,7 @@ img {
     width: 100%;
     display: block;
 }
+a {
+    color: #000;
+    text-decoration: none;
+}
