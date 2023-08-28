@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            height: 3000px;
+        }
         .box {
             width: 100px;
             height: 100px;
@@ -42,6 +45,28 @@
             bottom:0;
             position: absolute;
         }
+        .fixed {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            position: fixed;
+            z-index: 999;
+
+            right: 0;
+            bottom: 0;
+        }
+        .abs3 {
+            width: 100px;
+            height: 100px;
+            background-color: #bd1934;
+
+            position: absolute;
+            z-index: 999;
+
+            right: 50px;
+            bottom: 50px;
+        }
     </style>
 </head>
 <body>
@@ -59,6 +84,7 @@
         <div class="abs1"></div>
         <div class="abs2"></div>
     </div>
-
+    <div class="abs3"></div>
+    <div class="fixed"></div>
 </body>
 </html>
