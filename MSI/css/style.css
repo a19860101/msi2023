@@ -8,7 +8,12 @@ nav {
     margin-inline: auto;
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 .nav-menu:last-of-type{
     margin-left: auto;
+}
+.nav-menu {
+    display: flex;
+    gap:30px;
 }
