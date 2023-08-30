@@ -80,3 +80,43 @@ header img {
     padding: 15px;
     text-align: center;
 }
+
+/* aiot */
+#aiot {
+    background-color: pink;
+}
+.aiot-side {
+    flex:0 0 25%;
+    padding: 5px;
+}
+.aiot-main {
+    flex:0 0 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.aiot-main-col {
+    flex: 0 0 calc(100% / 3);
+    padding: 5px;
+}
+.aiot-text {
+    background-color: crimson;
+    margin-top: auto;
+    padding: 5px;
+}
+
+.aiot-item {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #098;
+    height: 100%;
+}
+.aiot-cover {
+    height: 100%;
+    background-color: #997;
+}
+
+.aiot-cover img{
+    height: 100%;
+    object-fit: cover;
+}
