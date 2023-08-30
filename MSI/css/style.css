@@ -37,3 +37,25 @@ header img {
     height: 100%;
     object-fit: cover;
 }
+
+/* soft */
+#soft {
+    background-color: #cecece;
+    padding-block: 10px;
+}
+.soft-container {
+    width: 800px;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.soft-item {
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.soft-item:first-of-type {
+    /* background-color: #098; */
+}
