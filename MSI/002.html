@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .container {
+            display: flex;
+            padding-inline:15px;
+            flex-wrap:wrap;
+            width: 100%;
+        }
+        .aiot-col {
+            flex: 0 0 25%;
+            padding: 5px;
+        }
+        .aiot-col:first-of-type {
+            background-color: #fa0;
+        }
+        .aiot-col:first-of-type .aiot-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .aiot-col:first-of-type .aiot-text {
+            background-color: #f00;
+            margin-top: auto;
+        }
+        .aiot-col:first-of-type .aiot-cover {
+            height: 100%;
+        }
+        .aiot-col:first-of-type .aiot-cover img {
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <section id="aiot">
+        <div class="container">
+            <div class="aiot-col">
+                <div class="aiot-item">
+                    <div class="aiot-cover">
+                        <img src="https://picsum.photos/800/600" alt="">
+                    </div>
+                    <div class="aiot-text">
+                        <h3>title</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aiot-col">
+                <div class="aiot-item">
+                    <div class="aiot-cover">
+                        <img src="https://picsum.photos/800/600" alt="">
+                    </div>
+                    <div class="aiot-text">
+                        <h3>title</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+                <div class="aiot-item">
+                    <div class="aiot-cover">
+                        <img src="https://picsum.photos/800/600" alt="">
+                    </div>
+                    <div class="aiot-text">
+                        <h3>title</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aiot-col">
+                <div class="aiot-item">
+                    <div class="aiot-cover">
+                        <img src="https://picsum.photos/800/600" alt="">
+                    </div>
+                    <div class="aiot-text">
+                        <h3>title</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+                <div class="aiot-item">
+                    <div class="aiot-cover">
+                        <img src="https://picsum.photos/800/600" alt="">
+                    </div>
+                    <div class="aiot-text">
+                        <h3>title</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aiot-col">
+                <div class="aiot-item">
+                    <div class="aiot-cover">
+                        <img src="https://picsum.photos/800/600" alt="">
+                    </div>
+                    <div class="aiot-text">
+                        <h3>title</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+                <div class="aiot-item">
+                    <div class="aiot-cover">
+                        <img src="https://picsum.photos/800/600" alt="">
+                    </div>
+                    <div class="aiot-text">
+                        <h3>title</h3>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
