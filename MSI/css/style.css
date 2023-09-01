@@ -122,3 +122,15 @@ header img {
     aspect-ratio: 4/3;
     object-fit: cover;
 }
+/* info */
+#info {
+    padding-block:200px;
+}
+.info-top-item {
+    flex: 0 0 25%;
+    text-align: center;
+}
+#info span {
+    display: block;
+    margin-top: 20px;
+}
