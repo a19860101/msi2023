@@ -160,3 +160,32 @@ header img {
     height: 100%;
     object-fit: cover;
 }
+/* footer  */
+footer {
+    border-top: 2px solid red;
+    padding-top: 30px;
+}
+.footer-item {
+    flex: 0 0 20%;
+    
+}
+.footer-item h3 {
+    margin-bottom: 20px;
+}
+.footer-item li {
+    list-style:none;
+    /* margin-bottom: 15px; */
+    line-height: 32px;
+}
+.copyright-item {
+    flex:0 0 50%;
+    padding-block:15px;
+}
+.copyright-item:last-of-type {
+    text-align: right;
+}
+
+footer hr {
+    width: 100%;
+    margin-block: 20px;
+}
