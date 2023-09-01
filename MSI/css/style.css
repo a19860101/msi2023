@@ -124,13 +124,39 @@ header img {
 }
 /* info */
 #info {
-    padding-block:200px;
+    padding-bottom:70px;
 }
 .info-top-item {
     flex: 0 0 25%;
     text-align: center;
+    padding-block:70px
 }
 #info span {
     display: block;
     margin-top: 20px;
+}
+
+.info-bottom-item {
+    flex:0 0 50%;
+    padding-inline: 10px;
+}
+.info-card {
+    position: relative;
+    aspect-ratio: 32 / 9;
+}
+/* .info-card img {
+    height: 100%;
+    object-fit: cover;
+} */
+.info-text {
+    position: absolute;
+    background-color: rgb(255 255 255 / .5);
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+}
+.obj-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
