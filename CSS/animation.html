@@ -11,7 +11,7 @@
             background-color: #a62;
 
             /* animation: a2 10s; */
-            animation-name: a2;
+            animation-name: a1;
             animation-duration: 6000ms;
             animation-delay: 0s;
             animation-iteration-count: infinite;
@@ -20,7 +20,7 @@
             animation-fill-mode: forwards;
             /* forwards, backwards */
 
-            animation-timing-function: ease;
+            animation-timing-function: steps(10);
         }
         .loading {
             width: 100px;
@@ -29,7 +29,7 @@
             position: absolute;
             inset: 0;
             margin: auto;
-            animation: loading 1s infinite linear;
+            animation: loading 10s infinite steps(24);
         }
         @keyframes loading {
             to 
