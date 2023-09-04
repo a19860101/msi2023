@@ -31,7 +31,11 @@ nav .container {
     color:#000;
 }
 
-.nav-link::before {
+.nav-link:not(.nav-menu:last-of-type .nav-link){
+    /* color: #f00; */
+}
+
+.nav-link::before:not(.nav-menu:last-of-type .nav-link::before) {
     content:'';
     position:absolute;
     width:100%;
