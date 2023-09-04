@@ -234,3 +234,14 @@ footer hr {
     width: 100%;
     margin-block: 20px;
 }
+
+.tri {
+    width:100px;
+    height:100px;
+    position:fixed;
+    background-color: #000;
+    right:0;
+    bottom:0;
+    clip-path: polygon(100% 0,100% 100%, 0 100%)
+    /* clip-path:circle() */
+}
