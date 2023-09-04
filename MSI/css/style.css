@@ -31,11 +31,7 @@ nav .container {
     color:#000;
 }
 
-.nav-link:not(.nav-menu:last-of-type .nav-link){
-    /* color: #f00; */
-}
-
-.nav-link::before:not(.nav-menu:last-of-type .nav-link::before) {
+.nav-link::before {
     content:'';
     position:absolute;
     width:100%;
@@ -49,7 +45,8 @@ nav .container {
     transform-origin: center;
     opacity: 0;
 }
-.nav-link:hover::before {
+
+.nav-menu:first-of-type .nav-link:hover::before {
     transform: scaleX(1);
     opacity:1;
 
