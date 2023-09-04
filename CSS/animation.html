@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #a62;
+
+            animation: a2 10s;
+        }
+
+        @keyframes a1 {
+            from {
+                transform: translateX(100%)translateY(100%);
+            }
+            to {
+                transform: translateX(200%)translateY(200%);
+            }
+        } 
+        @keyframes a2 {
+            0% {}
+            25% {transform: translateX(600px)translateY(0);}
+            50% {transform: translateX(600px)translateY(600px);}
+            75% {transform: translateX(0)translateY(600px);}
+            100% {}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
