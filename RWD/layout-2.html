@@ -74,9 +74,25 @@
             .col-xl-11 {flex:0 0 calc(100% / 12 * 11)}
             .col-xl-12 {flex:0 0 calc(100% / 12 * 12)}
         }
+        .column {
+            background-color: #fa0;
+        }
+        /* 屬性選取器 */
+        [class^="col"]:not(.column){
+            padding: 15px;
+        }
+        /* [class$="col"]{
+
+        }
+        [class*="col"]{
+
+        } */
     </style>
 </head>
 <body>
+    <div class="column">
+        hello
+    </div>
     <div class="container">
         <div class="col-xl-3 col-md-6 col-12">
             <h2>title</h2>
