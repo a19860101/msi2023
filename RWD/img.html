@@ -6,13 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <img 
-        src="https://picsum.photos/id/23/600" 
+    <!-- <img 
+        src="images/22.jpg" 
         srcset="
-            https://picsum.photos/id/22/300 480w,
-            https://picsum.photos/id/23/600 720w,
-            https://picsum.photos/id/24/900 1200w
+            images/22.jpg 480w,
+            images/23.jpg 720w,
+            images/24.jpg 1200w
         "
-        alt="">
+        alt=""> -->
+
+    <picture>
+        <source media="(max-width:800px)" srcset="https://picsum.photos/id/65/600">
+        <source media="(min-width:800px)" srcset="https://picsum.photos/id/66/600">
+        <img src="https://picsum.photos/id/65/600" alt="">
+    </picture>
 </body>
 </html>
