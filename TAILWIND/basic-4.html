@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme:{
+                extend:{
+                    colors: {
+                        'gold': {
+                            100:'#fffae0',
+                            200:'#ffd700',
+                            300:'#a88c00'
+                        },
+                        'primary':'blue',
+                        'secondary':'green'
+                    },
+                    width: {
+                        '100':'100px'
+                    },
+                    height: {
+                        '100':'100px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .box {
+            @apply w-[100px] h-[100px] bg-[pink] ;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-100 h-100 bg-gold-300">hello 我要100</div>
+    <div class="bg-gold-200">
+        gold
+    </div>
+    <div class="text-gold">
+        blue
+    </div>
+</body>
+</html>
