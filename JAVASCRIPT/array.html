@@ -49,9 +49,21 @@
 
         // const foods_slice = foods.slice(1,3);
         const foods_slice = foods.slice(3);
-        
-
         console.log(foods_slice);
+
+        // toString() 陣列轉字串
+        const foods_toString = foods.toString();
+        console.log(foods_toString);
+
+        // join() 陣列轉字串
+        const foods_join = foods.join('___');
+
+        // split() 字串轉陣列
+        let hashTag = 'web,html,網頁設計,前端';
+        const tagArray  = hashTag.split(',');
+        console.log(tagArray);
+
+        console.log(foods_join);
         console.log(foods);
     </script>
 </body>
