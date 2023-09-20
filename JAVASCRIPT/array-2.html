@@ -61,7 +61,18 @@
             return data.price === '500';
         })
 
-        console.log(food_index);
+        // some
+        const food_some = foods.some(function(data){
+            return data.price > 190;
+        });
+
+        // every
+        const food_every = foods.every(function(data){
+            return data.price > 0;
+        });
+
+        console.log(food_some);
+        console.log(food_every);
 
     </script>
 </body>
