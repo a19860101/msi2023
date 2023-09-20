@@ -9,10 +9,12 @@
     <script>
         //匿名函式
         // function(){}
+        console.log(test(1,2))
 
         // 函式宣告式 function declaration
-        function test(){
-            return 'test123';
+        function test(a,b){
+            // return 'test123';
+            return a + b;
         }
 
         // console.log(test());
@@ -20,8 +22,30 @@
         const qq = function(){
             return 'qqq123';
         }
-        console.log(qq());
+        // 提升性
 
+
+        // 箭頭函式 arrow function
+        /* 
+        const a = function(){
+            return a;
+        }
+         */
+        // const a = ()=>{
+        //     return a;
+        // }
+        // const a = () => a;
+
+        // const a = x => x;
+
+        const a = (x,y) => {
+            this.x = x + y;
+            return x;
+        }
+        
+        // 在箭頭函式中，唯有this會有差別
+        
+        console.log('123');
     </script>
 </body>
 </html>
