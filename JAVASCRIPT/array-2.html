@@ -71,9 +71,14 @@
             return data.price > 0;
         });
 
-        console.log(food_some);
-        console.log(food_every);
+        const total = food_price.reduce(function(a,b,idx){
+            // console.log(idx);
+            // console.log('a:'+a);
+            // console.log('b:'+b);
+            return Number(a) + Number(b);
+        });
 
+        console.log(total)
     </script>
 </body>
 </html>
