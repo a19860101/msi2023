@@ -37,8 +37,16 @@
         const food_price = foods.map(function(data){
             return data.price
         })
+        //filter
+        const expensive = foods.filter(function(data){
+            return data.price > 500;
+        })
 
-        console.log(food_price);
+        const beef = foods.filter(function(data){
+            return data.name != '牛肉麵'
+        })
+
+        console.log(beef);
 
     </script>
 </body>
