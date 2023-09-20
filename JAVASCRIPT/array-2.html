@@ -22,6 +22,11 @@
                 id:3,
                 name:'臭豆腐',
                 price: '990'
+            },
+            {
+                id:4,
+                name:'排骨飯',
+                price: '500'
             }
         ];
         //foreach
@@ -46,7 +51,17 @@
             return data.name != '牛肉麵'
         })
 
-        console.log(beef);
+        // find
+        const food_find = foods.find(function(data){
+            return data.price === '500';
+        })
+
+        //findIndex
+        const food_index = foods.findIndex(function(data){
+            return data.price === '500';
+        })
+
+        console.log(food_index);
 
     </script>
 </body>
