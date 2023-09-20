@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const user = new Object();
+        const food = {};
+        food.name = '汝肉飯';
+        food.price = '190';
+        console.log(food);
+
+        const foods = [
+            {
+                id: 1,
+                name: '滷肉飯',
+                price: '190'
+            },
+            {
+                id: 2,
+                name: '牛肉麵',
+                price: '500'
+            }
+        ];
+        // console.log(foods);
+        // console.log(foods[1].name)
+        // console.log(foods[0].price)
+
+        for(let f of foods){
+            console.log(f.name);
+            console.log(f.price);
+        }
+    </script>
+</body>
+</html>
