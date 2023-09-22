@@ -29,11 +29,11 @@
 
         // query selector(唯一)
         let el = document.querySelector('.item');
-        console.log(el);
+        // console.log(el);
 
         // query selector all
         let els = document.querySelectorAll('.item');
-        console.log(els);
+        // console.log(els);
 
         // get element
         let title = document.getElementById('title');
@@ -43,10 +43,27 @@
 
         let p = document.getElementsByTagName('p');
 
-        console.log(title);
-        console.log(subtitle);
-        console.log(items);
-        console.log(p);
+        // console.log(title);
+        // console.log(subtitle);
+        // console.log(items);
+        // console.log(p);
+
+        let nodeList = document.querySelectorAll('.item');
+        let collection = document.getElementsByClassName('item');
+
+        console.log(nodeList,collection);
+
+        let nl = nodeList.length;
+        let cl = collection.length;
+        console.log(nl,cl);
+        
+        nodeList[2].remove();
+
+        nl = nodeList.length;
+        cl = collection.length;
+        console.log(nl,cl);
+
+
     </script>
 </body>
 </html>
