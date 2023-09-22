@@ -32,8 +32,9 @@
         // console.log(el);
 
         // query selector all
-        let els = document.querySelectorAll('.item');
-        // console.log(els);
+        // let els = [...document.querySelectorAll('.item')];
+        let els = Array.from(document.querySelectorAll('.item'));
+        console.log(els);
 
         // get element
         let title = document.getElementById('title');
@@ -57,13 +58,19 @@
         let cl = collection.length;
         console.log(nl,cl);
         
-        nodeList[2].remove();
+        nodeList[3].remove();
+        collection[2].remove();
 
         nl = nodeList.length;
         cl = collection.length;
         console.log(nl,cl);
 
 
+        // let newNode = Array.from(nodeList);
+        // let newColl = Array.from(collection);
+        // let newNode = [...nodeList];
+        // let newColl = [...collection];
+        // console.log(newNode,newColl);
     </script>
 </body>
 </html>
