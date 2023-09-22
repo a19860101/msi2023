@@ -11,21 +11,21 @@
             name: 'john'
         }
 
-        let fn = function(){
+        function fn(){
             // console.log(this.constructor.name)
             console.log(this)
+            setTimeout(function(){
+                console.log(this);
+            },100)
+            setTimeout(()=>{
+                console.log(this);
+            },100)
         }
-
-        // fn.call(user);
 
         // fn();
-
-        let arrowFn = () => {
-            console.log(this);
-        }
+        fn.call(user);
         
         // arrowFn();
-        arrowFn.call(user);
     </script>
 </body>
 </html>
