@@ -19,6 +19,9 @@
     <button class="add">Add</button>
     <button class="remove">Remove</button>
     <button class="toggle">Toggle</button>
+    <!-- <button class="add" onclick="add()">Add</button>
+    <button class="remove" onclick="remove()">Remove</button>
+    <button class="toggle" onclick="toggle()">Toggle</button> -->
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis suscipit dignissimos sit libero quam alias, provident nisi neque nam velit optio eos nulla repellat a quidem tempora deleniti ducimus magnam?
     </p>
@@ -28,15 +31,36 @@
         let toggle = document.querySelector('.toggle');
         let p = document.querySelector('p');
 
-        add.onclick = () => {
+        // add.onclick = () => {
+        //     p.classList.add('red');
+        // }
+        // remove.onclick = () => {
+        //     p.classList.remove('red');
+        // }
+        // toggle.onclick = () => {
+        //     p.classList.toggle('red');
+        // }
+        // function add(){
+        //     p.classList.add('red');
+        // }
+        // function remove(){
+        //     p.classList.remove('red');
+        // }
+        // function toggle(){
+        //     p.classList.toggle('red');
+        // }
+        add.addEventListener('click',function(){
             p.classList.add('red');
-        }
-        remove.onclick = () => {
+        });
+        function rm(){
             p.classList.remove('red');
         }
-        toggle.onclick = () => {
+        remove.addEventListener('click',rm);
+
+        toggle.addEventListener('click',() => {
             p.classList.toggle('red');
-        }
+        },false);
+        // 事件冒泡
     </script>
 </body>
 </html>
