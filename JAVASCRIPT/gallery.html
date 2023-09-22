@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumb-container {
+            display: flex;
+            width: 600px;
+        }
+        .thumb {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/10/600" alt="" class="main">
+        <div class="thumb-container">
+            <img src="https://picsum.photos/id/10/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/20/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/30/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/40/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/50/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/60/600" alt="" class="thumb">
+        </div>
+    </div>
+    <script>
+        let thumbs = document.querySelectorAll('.thumb');
+        // console.log(thumbs)
+        for(let t of thumbs){
+            // t.onclick = function(){
+            //     let newSrc = this.getAttribute('src');
+            //     console.log(newSrc);
+            //     document.querySelector('.main').setAttribute('src',newSrc);
+            // }
+            t.onclick = e => {
+                let newSrc = e.target.getAttribute('src');
+                console.log(newSrc);
+                document.querySelector('.main').setAttribute('src',newSrc);
+            }
+        }
+    </script>
+</body>
+</html>
