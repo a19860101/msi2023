@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, ratione?
+    </p>
+    <div class="container">
+        <h2 class="subtitle">title</h2>
+        <p class="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quod hic reiciendis? Deleniti voluptate impedit non. Accusantium modi placeat, molestiae ut rem, dolorem maxime dignissimos expedita cumque vitae minus dolorum.
+        </p>
+        <ul class="list">
+            <li class="item">list 1</li>
+            <li class="item">list 2</li>
+            <li class="item">list3</li>
+            <li class="item">list 4</li>
+            <li class="item">list 5</li>
+        </ul>
+    </div>
+    <script>
+        // dom document object model
+
+
+        // query selector(唯一)
+        let el = document.querySelector('.item');
+        console.log(el);
+
+        // query selector all
+        let els = document.querySelectorAll('.item');
+        console.log(els);
+
+        // get element
+        let title = document.getElementById('title');
+
+        let subtitle = document.getElementsByClassName('subtitle')
+        let items = document.getElementsByClassName('item')
+
+        let p = document.getElementsByTagName('p');
+
+        console.log(title);
+        console.log(subtitle);
+        console.log(items);
+        console.log(p);
+    </script>
+</body>
+</html>

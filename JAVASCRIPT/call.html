@@ -10,7 +10,6 @@
         let user = {
             name: 'john'
         }
-
         function fn(){
             // console.log(this.constructor.name)
             console.log(this)
@@ -19,11 +18,11 @@
             },100)
             setTimeout(()=>{
                 console.log(this);
-            },100)
+            },200)
         }
 
-        // fn();
-        fn.call(user);
+        fn();
+        // fn.call(user);
         
         // arrowFn();
     </script>
