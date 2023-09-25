@@ -46,6 +46,26 @@
         <div class="slider-item">
             <img src="https://picsum.photos/id/26/1200/600" alt="">
         </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/27/1200/600" alt="">
+        </div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+        let timeout = 1000;
+
+        setInterval(function(){
+            if(currentIndex === total - 1){
+                currentIndex = 0;
+            }else{
+                currentIndex++;
+            }
+            console.log(currentIndex);
+
+        },timeout);
+        // setTimeout();
+    </script>
 </body>
 </html>
