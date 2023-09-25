@@ -13,31 +13,44 @@
         .tab {
             width: 600px;
             margin-inline: auto;
+
+            position: relative;
         }
         .tab-nav {
             display: flex;
             padding: 15px;
             background-color: #222;
-            gap: 20px;
+            gap:5px;
         }
         .tab-link {
             text-decoration: none;
             color: #eee;
+            padding-inline:15px;
+            padding-block:8px;
+            border-radius:7px;
+            transition: 600ms;
+        }
+        .tab-link.active {
+            background-color: #e04;
         }
         .tab-panel {
             padding: 15px;
             background-color: #ccc;
-            display: none;
+            /* display: none; */
+            position: absolute;
+            opacity: 0;
+            transition: 600ms;
         }
         .tab-panel.active {
-            display: block;
+            /* display: block; */
+            opacity: 1;
         }
     </style>
 </head>
 <body>
     <div class="tab">
         <div class="tab-nav">
-            <a href="#tab-1" data-target="#tab-1" data-test="111" class="tab-link">tab 1</a>
+            <a href="#tab-1" data-target="#tab-1" data-test="111" class="tab-link active">tab 1</a>
             <a href="#tab-2" data-target="#tab-2" data-test="222" class="tab-link">tab 2</a>
             <a href="#tab-3" data-target="#tab-3" data-test="333" class="tab-link">tab 3</a>
         </div>
@@ -67,6 +80,9 @@
                 // console.log(this);
                 let href = this.getAttribute('href');
                 let target = this.dataset.target;
+
+                document.querySelector('.tab-link.active').classList.remove('active');
+                this.classList.add('active');
 
                 document.querySelector('.tab-panel.active').classList.remove('active');
                 document.querySelector(target).classList.add('active');
