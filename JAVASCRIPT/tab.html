@@ -28,7 +28,7 @@
             padding-inline:15px;
             padding-block:8px;
             border-radius:7px;
-            transition: 600ms;
+            transition: 300ms;
         }
         .tab-link.active {
             background-color: #e04;
@@ -39,11 +39,14 @@
             /* display: none; */
             position: absolute;
             opacity: 0;
-            transition: 600ms;
+            visibility: hidden;
+            transition: 300ms;
         }
         .tab-panel.active {
             /* display: block; */
             opacity: 1;
+            /* z-index: 10; */
+            visibility: visible;
         }
     </style>
 </head>
