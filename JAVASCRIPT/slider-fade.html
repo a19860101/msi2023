@@ -29,6 +29,11 @@
             opacity: 1;
             visibility: visible;
         }
+        .slider-nav {
+            position: absolute;
+            bottom: 0;
+            transform: translateY(100%);
+        }
     </style>
 </head>
 <body>
@@ -51,21 +56,45 @@
         <div class="slider-item">
             <img src="https://picsum.photos/id/27/1200/600" alt="">
         </div>
+        <div class="slider-nav">
+            <a href="#" class="slider-prev">prev</a>
+            <a href="#" class="slider-next">next</a>
+        </div>
     </div>
     <script>
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
         let currentIndex = 0;
         let timeout = 3000;
+        let prev = document.querySelector('.slider-prev');
+        let next = document.querySelector('.slider-next');
 
-        function slider(){
+        prev.onclick = function(){
+            slider('prev');
+        }
+        next.onclick = function(){
+            slider();
+        }
+
+        function slider(direction){
             // if(currentIndex === total - 1){
             //     currentIndex = 0;
             // }else{
             //     currentIndex++;
             // }
-            currentIndex = (currentIndex+1) % total;
-            console.log(currentIndex);
+            
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex-1) % total;
+                switchImg();
+
+            }else{
+                currentIndex = (currentIndex+1) % total;
+                console.log(currentIndex);
+                switchImg();
+            }
+        }
+        function switchImg(){
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
         }
