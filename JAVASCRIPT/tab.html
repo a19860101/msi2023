@@ -68,7 +68,15 @@
                 let href = this.getAttribute('href');
                 let target = this.dataset.target;
 
-                console.log(target);
+                document.querySelector('.tab-panel.active').classList.remove('active');
+                document.querySelector(target).classList.add('active');
+
+                // let panels = document.querySelectorAll('.tab-panel');
+                // for(let p of panels){
+                //     if('#'+ p.dataset.panel === target){
+                //         p.classList.add('active');
+                //     }
+                // }
             }
         }
     </script>
