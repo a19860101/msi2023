@@ -22,6 +22,8 @@
             height: 100%;
             opacity: 0;
             visibility: hidden;
+
+            transition: 500ms;
         }
         .slider-item.active {
             opacity: 1;
@@ -54,17 +56,21 @@
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
         let currentIndex = 0;
-        let timeout = 1000;
+        let timeout = 3000;
 
-        setInterval(function(){
-            if(currentIndex === total - 1){
-                currentIndex = 0;
-            }else{
-                currentIndex++;
-            }
+        function slider(){
+            // if(currentIndex === total - 1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex++;
+            // }
+            currentIndex = (currentIndex+1) % total;
             console.log(currentIndex);
+            document.querySelector('.slider-item.active').classList.remove('active');
+            imgs[currentIndex].classList.add('active');
+        }
 
-        },timeout);
+        setInterval(slider,timeout);
         // setTimeout();
     </script>
 </body>
