@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 遍歷 -->
+    <div class="container">
+        <h1>title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos alias aliquam sed quae eligendi culpa, veniam harum excepturi rerum obcaecati expedita mollitia, voluptates suscipit debitis ipsum similique, rem fugit.
+        </p>
+        <ul class="list">
+            <!-- asdf -->
+            <li class="item"><a href="#" class="link">list1</a></li>
+            <li class="item"><a href="#" class="link">list2</a></li>
+            <li class="item"><a href="#" class="link">list3</a></li>
+            <li class="item"><a href="#" class="link">list4</a></li>
+            <li class="item"><a href="#" class="link">list5</a></li>
+        </ul>
+        <a href="#" class="btn">click</a>
+    </div>
+    <script>
+        let el = document.querySelector('p');
+        let ul = document.querySelector('ul');
+        // 父元素
+        console.log(el.parentElement);
+        // 父節點
+        console.log(el.parentNode);
+
+        // 子元素
+        // console.log(el.children);
+        console.log(ul.children);
+        // 子節點
+        // console.log(el.childNodes);
+        console.log(ul.childNodes);
+
+        // 同輩元素
+        console.log(el.nextElementSibling);
+        console.log(el.previousElementSibling);
+        // 同輩節點
+        console.log(el.nextSibling);
+        console.log(el.previousSibling);
+
+        /* 
+            節點分類
+            1. 文字節點 包含文字與換行
+            2. 元素節點
+            3. 註解節點
+        */
+    </script>
+</body>
+</html>
