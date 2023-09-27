@@ -34,6 +34,27 @@
             bottom: 0;
             transform: translateY(100%);
         }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 0;
+            /* background-color: #ccc; */
+            height: 50px;
+            width: 100%;
+            transform: translateY(200%);
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider-dot {
+            width: 15px;
+            height: 15px;
+            background-color: #e04;
+            border-radius: 50%;
+
+        }
+        
     </style>
 </head>
 <body>
@@ -60,6 +81,7 @@
             <a href="#" class="slider-prev">prev</a>
             <a href="#" class="slider-next">next</a>
         </div>
+        <div class="slider-dots"></div>
     </div>
     <script>
         let imgs = document.querySelectorAll('.slider-item');
@@ -109,6 +131,14 @@
         // 定義計時器
         let timer = setInterval(slider,timeout);
         // setTimeout();
+
+        // 產生dots
+        for(let i=0;i<total;i++){
+            let dot = document.createElement('span');
+            dot.classList.add('slider-dot');
+            dot.dataset.index = i;
+            document.querySelector('.slider-dots').append(dot);
+        }
     </script>
 </body>
 </html>
