@@ -69,17 +69,20 @@
         let prev = document.querySelector('.slider-prev');
         let next = document.querySelector('.slider-next');
 
+        //上一張
         prev.onclick = function(){
             slider('prev');
             clearInterval(timer);
             timer = setInterval(slider,timeout);
         }
+        //下一張
         next.onclick = function(){
             slider();
             clearInterval(timer);
             timer = setInterval(slider,timeout);
         }
 
+        // 設定循環
         function slider(direction){
             // if(currentIndex === total - 1){
             //     currentIndex = 0;
@@ -98,11 +101,12 @@
                 switchImg();
             }
         }
+        // 圖片切換
         function switchImg(){
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
         }
-
+        // 定義計時器
         let timer = setInterval(slider,timeout);
         // setTimeout();
     </script>
