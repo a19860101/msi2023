@@ -20,6 +20,8 @@
         <a :href="link" target="_blank">yahoo</a>
         <input type="text" v-model="value">
         {{value}}
+        <a href="#" v-on:click="test()">click</a>
+        <a href="#" @click="test()">click</a>
     </div>
     <script>
         Vue.createApp({
@@ -31,6 +33,11 @@
                     link: 'https://tw.yahoo.com',
                     style:'active',
                     value: 'hello123'
+                }
+            },
+            methods:{
+                test(){
+                    alert('hello test');
                 }
             }
         }).mount('#app');
