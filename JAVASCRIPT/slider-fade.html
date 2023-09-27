@@ -139,6 +139,17 @@
             dot.dataset.index = i;
             document.querySelector('.slider-dots').append(dot);
         }
+
+        let dots = document.querySelectorAll('.slider-dot');
+        for(let dot of dots){
+            dot.onclick = function(){
+                currentIndex = Number(this.dataset.index);
+                console.log(currentIndex);
+                switchImg();
+                clearInterval(timer);
+                timer = setInterval(slider,timeout);
+            }
+        }
     </script>
 </body>
 </html>
