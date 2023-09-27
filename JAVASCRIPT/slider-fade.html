@@ -54,6 +54,9 @@
             border-radius: 50%;
 
         }
+        .slider-dot.active {
+            background-color: #ffde08;
+        }
         
     </style>
 </head>
@@ -102,6 +105,7 @@
             slider();
             clearInterval(timer);
             timer = setInterval(slider,timeout);
+            
         }
 
         // 設定循環
@@ -116,17 +120,24 @@
                 currentIndex = currentIndex === 0 ? total : currentIndex;
                 currentIndex = (currentIndex-1) % total;
                 switchImg();
+                
 
             }else{
                 currentIndex = (currentIndex+1) % total;
                 console.log(currentIndex);
                 switchImg();
             }
+            switchDot();
         }
         // 圖片切換
         function switchImg(){
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
+        }
+        // dot切換
+        function switchDot(){
+            document.querySelector('.slider-dot.active').classList.remove('active');
+            dots[currentIndex].classList.add('active');
         }
         // 定義計時器
         let timer = setInterval(slider,timeout);
@@ -141,13 +152,17 @@
         }
 
         let dots = document.querySelectorAll('.slider-dot');
+        dots[0].classList.add('active');
         for(let dot of dots){
             dot.onclick = function(){
                 currentIndex = Number(this.dataset.index);
                 console.log(currentIndex);
                 switchImg();
+                switchDot();
                 clearInterval(timer);
                 timer = setInterval(slider,timeout);
+
+                
             }
         }
     </script>
