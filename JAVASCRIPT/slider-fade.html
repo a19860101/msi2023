@@ -71,9 +71,13 @@
 
         prev.onclick = function(){
             slider('prev');
+            clearInterval(timer);
+            timer = setInterval(slider,timeout);
         }
         next.onclick = function(){
             slider();
+            clearInterval(timer);
+            timer = setInterval(slider,timeout);
         }
 
         function slider(direction){
@@ -99,7 +103,7 @@
             imgs[currentIndex].classList.add('active');
         }
 
-        setInterval(slider,timeout);
+        let timer = setInterval(slider,timeout);
         // setTimeout();
     </script>
 </body>
