@@ -5,18 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .active {
+            background-color: #fa0;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <h1>{{title}}</h1>
         <h2>{{author}}</h2>
+        <div :class="style">{{qty > 0 ? '貨源充足':'補貨中'}}</div>
+        <a v-bind:href="link">yahoo</a>
+        <a :href="link" target="_blank">yahoo</a>
+        <input type="text" v-model="value">
+        {{value}}
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
                     title: 'Hello Vue',
-                    author: 'Zac'
+                    author: 'Zac',
+                    qty: 10,
+                    link: 'https://tw.yahoo.com',
+                    style:'active',
+                    value: 'hello123'
                 }
             }
         }).mount('#app');
