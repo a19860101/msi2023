@@ -1,0 +1,20 @@
+{
+    "title":"My First Json Data",
+    "datas":[
+        {
+            "id":1,
+            "name":"紅茶",
+            "price":30
+        },
+        {
+            "id":2,
+            "name":"綠茶",
+            "price":30
+        },
+        {
+            "id":3,
+            "name":"奶茶",
+            "price":50
+        }
+    ]
+}

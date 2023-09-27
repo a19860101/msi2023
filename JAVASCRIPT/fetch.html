@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let url = 'data.json';
+        // let url = 'https://data.moenv.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=ImportDate%20desc&format=JSON';
+        // let url = 'https://odws.hccg.gov.tw/001/Upload/25/opendataback/9059/1550/6fdcec19-414f-4ca1-a920-d5ad18c86e59.json';
+        // let url = 'https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json';
+        let url = 'https://media.taiwan.net.tw/XMLReleaseALL_public/scenic_spot_C_f.json';
+        // fetch(url)
+        // .then(function(res){
+        //     return res.json();
+        // })
+        // .then(function(data){
+        //     console.log(data);
+        // })
+        fetch(url).then(res=>res.json()).then(data=>{
+            console.log(data);
+        })
+    </script>
+</body>
+</html>

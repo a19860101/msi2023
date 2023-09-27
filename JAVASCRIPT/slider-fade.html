@@ -119,14 +119,15 @@
             if(direction === 'prev'){
                 currentIndex = currentIndex === 0 ? total : currentIndex;
                 currentIndex = (currentIndex-1) % total;
-                switchImg();
+                // switchImg();
                 
 
             }else{
                 currentIndex = (currentIndex+1) % total;
                 console.log(currentIndex);
-                switchImg();
+                // switchImg();
             }
+            switchImg();
             switchDot();
         }
         // 圖片切換
