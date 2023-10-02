@@ -6,19 +6,49 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
+    <!-- <div id="app">
         <h1></h1>
         <h2></h2>
+    </div> -->
+    <div class="foods">
+
     </div>
     <script>
-        let title = 'Hello vue';
-        let author = 'Zac';
-        let h1 = document.querySelector('h1');
-        let h2 = document.querySelector('h2');
-        h1.append(title);
-        h2.append(author);
+        // let title = 'Hello vue';
+        // let author = 'Zac';
+        // let h1 = document.querySelector('h1');
+        // let h2 = document.querySelector('h2');
+        // h1.append(title);
+        // h2.append(author);
         // document.querySelector('#app').append(h1,h2);
-        
+        const foods = [
+            {
+                id: 1,
+                name: '滷肉飯',
+                price: '190'
+            },
+            {
+                id: 2,
+                name: '牛肉麵',
+                price: '500'
+            },
+            {
+                id:3,
+                name:'臭豆腐',
+                price: '990'
+            },
+            {
+                id:4,
+                name:'排骨飯',
+                price: '500'
+            }
+        ];
+        let el = document.querySelector('.foods');
+        for(let f of foods){
+            let div = document.createElement('div');
+            div.append(f.name);
+            el.append(div);
+        }
     </script>
 </body>
 </html>

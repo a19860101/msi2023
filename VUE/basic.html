@@ -23,6 +23,14 @@
         <a href="#" v-on:click="test()">click</a>
         
         <a href="#" @click="test()">click</a>
+        <div>
+            <div v-for="product,idx of products">
+                {{product}} / {{idx}}
+            </div>
+            <div v-for="f of foods">
+                {{f.name}}:{{f.price}}
+            </div>
+        </div>
     </div>
     <script>
         Vue.createApp({
@@ -33,7 +41,30 @@
                     qty: 10,
                     link: 'https://tw.yahoo.com',
                     style:'active',
-                    value: 'hello123'
+                    value: 'hello123',
+                    products:['iPhone 15','iPhone 15 Plus','iPhone 15 Pro','iPhone 15 Pro Max'],
+                    foods:[
+                            {
+                                id: 1,
+                                name: '滷肉飯',
+                                price: '190'
+                            },
+                            {
+                                id: 2,
+                                name: '牛肉麵',
+                                price: '500'
+                            },
+                            {
+                                id:3,
+                                name:'臭豆腐',
+                                price: '990'
+                            },
+                            {
+                                id:4,
+                                name:'排骨飯',
+                                price: '500'
+                            }
+                        ]
                 }
             },
             methods:{
