@@ -8,7 +8,14 @@
 
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <h2>今日天氣 {{weathers.weather[0].description}}</h2>
+
+        <div>平均溫度:{{weathers.main.temp}}&deg;C</div>
+        <div>最高溫度:{{weathers.main.temp_max}}&deg;C</div>
+        <div>最低溫度:{{weathers.main.temp_min}}&deg;C</div>
+        <div>體感溫度:{{weathers.main.feels_like}}&deg;C</div>
+    </div>
     <script>
         Vue.createApp({
             data(){
@@ -17,7 +24,7 @@
                 }
             },
             created(){
-                const url = 'https://api.openweathermap.org/data/2.5/weather?q=taipei&appid=b1ecbccd638b763d489602917ba47cc3';
+                const url = 'https://api.openweathermap.org/data/2.5/weather?q=bangkok&units=metric&lang=zh_tw&appid=b1ecbccd638b763d489602917ba47cc3';
                 fetch(url)
                 .then(res => res.json())
                 .then(data=>{
