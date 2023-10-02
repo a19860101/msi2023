@@ -16,7 +16,7 @@
         <h2>已完成</h2>
         <div>
             <form action="#">
-                <div v-for="todo in isComplete">
+                <div v-for="todo in isComplete" :key="todo.id">
                     {{todo.title}}
                     <input type="checkbox" v-model="todo.isCompleted">
                 </div>
@@ -26,7 +26,7 @@
         <div>
             <h2>未完成</h2>
             <form action="#">
-                <div v-for="todo in unComplete">
+                <div v-for="todo in unComplete" :key="todo.id">
                     {{todo.title}}
                     <input type="checkbox" v-model="todo.isCompleted">
                 </div>
