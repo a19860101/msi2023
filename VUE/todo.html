@@ -21,7 +21,9 @@
                 </div>
             </form>
         </div>
-        {{todos}}
+        {{isComplete}}
+        <hr>
+        {{unComplete}}
     </div>
     <script>
         Vue.createApp({
@@ -50,6 +52,14 @@
                         isCompleted:false
                     });
                     this.input = '';
+                }
+            },
+            computed:{
+                isComplete(){
+                    return this.todos.filter(data => data.isCompleted === true);
+                },
+                unComplete(){
+                    return this.todos.filter(data => data.isCompleted === false);
                 }
             }
         }).mount('#app');
