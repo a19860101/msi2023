@@ -14,7 +14,12 @@
             <input type="button" value="add" @click="add()">
         </form>
         <div>
-            <div v-for="todo in todos">{{todo.title}}</div>
+            <form action="#">
+                <div v-for="todo in todos">
+                    {{todo.title}}
+                    <input type="checkbox" v-model="todo.isCompleted">
+                </div>
+            </form>
         </div>
         {{todos}}
     </div>
