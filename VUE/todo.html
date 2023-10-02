@@ -16,6 +16,7 @@
         <div>
             <div v-for="todo in todos">{{todo.title}}</div>
         </div>
+        {{todos}}
     </div>
     <script>
         Vue.createApp({
@@ -38,7 +39,12 @@
             },
             methods:{
                 add(){
-                    alert(this.input);
+                    this.todos.push({
+                        id:Date.now(),
+                        title:this.input,
+                        isCompleted:false
+                    });
+                    this.input = '';
                 }
             }
         }).mount('#app');
