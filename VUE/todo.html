@@ -13,17 +13,27 @@
             <input type="text" v-model="input">
             <input type="button" value="add" @click="add()">
         </form>
+        <h2>已完成</h2>
         <div>
             <form action="#">
-                <div v-for="todo in todos">
+                <div v-for="todo in isComplete">
                     {{todo.title}}
                     <input type="checkbox" v-model="todo.isCompleted">
                 </div>
             </form>
         </div>
-        {{isComplete}}
         <hr>
-        {{unComplete}}
+        <div>
+            <h2>未完成</h2>
+            <form action="#">
+                <div v-for="todo in unComplete">
+                    {{todo.title}}
+                    <input type="checkbox" v-model="todo.isCompleted">
+                </div>
+            </form>
+        </div>
+
+
     </div>
     <script>
         Vue.createApp({
