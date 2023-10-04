@@ -14,7 +14,7 @@
             <a href="#">購物車</a>
         </nav>
         <div class="container flex flex-wrap mx-auto">
-            <div v-for="product in products" class="lg:w-1/4 sm:w-1/2 w-full p-4">
+            <div v-for="product,idx in products" class="lg:w-1/4 sm:w-1/2 w-full p-4">
                 <div class="bg-zinc-200 border border-zinc-700 rounded-lg overflow-hidden">
                     <div class="aspect-video">
                         <!-- {{product.image}} -->
@@ -23,7 +23,8 @@
                     <div class="p-3 space-y-4">
                         <h3>{{product.title}}</h3>
                         <div>{{product.price}}</div>
-                        <a href="#" class="px-5 py-2 rounded-lg bg-blue-400 inline-block">加入購物車</a>
+                        <a href="#" class="px-5 py-2 rounded-lg bg-blue-400 inline-block" @click="storeToCart(product.id)">加入購物車</a>
+                        <!-- <a href="#" class="px-5 py-2 rounded-lg bg-blue-400 inline-block" @click="storeToCart(idx)">加入購物車</a> -->
                     </div>
                 </div>
             </div>
@@ -34,7 +35,8 @@
         Vue.createApp({
             data(){
                 return{
-                    products: ''
+                    products: '',
+                    carts:[]
                 }
             },
             created(){
@@ -43,6 +45,11 @@
                     this.products = data;
                     console.log(data);
                 })
+            },
+            methods:{
+                storeToCart(pid){
+                    console.log(pid);
+                }
             }
         }).mount('#app');
     </script>
