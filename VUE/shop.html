@@ -22,6 +22,9 @@
                 <a href="#" @click="removeItem(idx)">移除</a>
             </div>
             <a href="#" @click="clearCart()" v-if="carts.length != 0" class="px-5 py-2 bg-red-600 rounded-lg text-white inline-block">清空購物車</a>
+            <div>
+                小計：{{total}}
+            </div>
         </div>
         <div class="container flex flex-wrap mx-auto">
             <div v-for="product,idx in products" class="lg:w-1/4 sm:w-1/2 w-full p-4">
@@ -78,7 +81,25 @@
                         this.carts.splice(idx,1);
                     }
                 }
+            },
+            computed:{
+                // price(){
+                //     if(this.carts.length > 0){
+                //         return this.carts.map(data=>data.price);
+                //     }else{
+                //         return [0];
+                //     }
+                // },
+                total(){
+                    if(this.carts.length > 0){
+                        return this.carts.map(data=>data.price).reduce((x,y)=>Number(x)+Number(y));
+                    }else{
+                        return 0;
+                    }
+                    // return this.price.reduce((x,y)=>Number(x)+Number(y));
+                }
             }
+
         }).mount('#app');
     </script>
 </body>
