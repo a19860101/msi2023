@@ -14,15 +14,17 @@
             <a href="#">購物車</a>
         </nav>
         <div class="container flex flex-wrap mx-auto">
-            <div v-for="product in products" class="lg:w-1/4 sm:w-1/2 w-full">
-                <div>
-                    <div>
+            <div v-for="product in products" class="lg:w-1/4 sm:w-1/2 w-full p-4">
+                <div class="bg-zinc-200 border border-zinc-700 rounded-lg overflow-hidden">
+                    <div class="aspect-video">
                         <!-- {{product.image}} -->
-                        <img :src="product.image" alt="" class="w-full">
+                        <img :src="product.image" alt="" class="w-full h-full object-cover">
                     </div>
-                    <h3>{{product.title}}</h3>
-                    <div>{{product.price}}</div>
-                    <a href="#" class="px-5 py-2 rounded-lg bg-blue-400">加入購物車</a>
+                    <div class="p-3 space-y-4">
+                        <h3>{{product.title}}</h3>
+                        <div>{{product.price}}</div>
+                        <a href="#" class="px-5 py-2 rounded-lg bg-blue-400 inline-block">加入購物車</a>
+                    </div>
                 </div>
             </div>
         </div>
