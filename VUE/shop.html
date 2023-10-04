@@ -13,14 +13,15 @@
         <nav class="p-5 bg-zinc-900">
             <a href="#" class="text-zinc-50">購物車</a>
         </nav>
-        <div class="w-[400px] h-screen bg-zinc-300 right-0 top-0 fixed">
-            <div v-for="cart in carts" class="p-4">
+        <div class="w-[400px] h-screen bg-zinc-300 right-0 top-0 fixed p-3">
+            <div v-for="cart,idx in carts" class="py-2">
                 <h3>{{cart.title}}</h3>
                 <div>
                     {{cart.price}}
                 </div>
+                <a href="#" @click="removeItem(idx)">移除</a>
             </div>
-            <a href="#" @click="clearCart()" v-if="carts.length != 0" class="px-2 py-5 bg-red-400 rounded-lg">清空購物車</a>
+            <a href="#" @click="clearCart()" v-if="carts.length != 0" class="px-5 py-2 bg-red-600 rounded-lg text-white inline-block">清空購物車</a>
         </div>
         <div class="container flex flex-wrap mx-auto">
             <div v-for="product,idx in products" class="lg:w-1/4 sm:w-1/2 w-full p-4">
@@ -70,6 +71,11 @@
                 clearCart(){
                     if(confirm('確認清空購物車嗎？')){
                         this.carts.length = 0;
+                    }
+                },
+                removeItem(idx){
+                    if(confirm('確認移除商品嗎？')){
+                        this.carts.splice(idx,1);
                     }
                 }
             }
