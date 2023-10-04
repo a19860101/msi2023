@@ -10,11 +10,16 @@
 </head>
 <body>
     <div id="app">
-        <nav class="p-5">
-            <a href="#">購物車</a>
+        <nav class="p-5 bg-zinc-900">
+            <a href="#" class="text-zinc-50">購物車</a>
         </nav>
-        <div>
-            {{carts}}
+        <div class="w-[400px] h-screen bg-zinc-300 right-0 top-0 fixed">
+            <div v-for="cart in carts" class="p-4">
+                <h3>{{cart.title}}</h3>
+                <div>
+                    {{cart.price}}
+                </div>
+            </div>
         </div>
         <div class="container flex flex-wrap mx-auto">
             <div v-for="product,idx in products" class="lg:w-1/4 sm:w-1/2 w-full p-4">
@@ -51,14 +56,15 @@
             },
             methods:{
                 storeToCart(pid){
-                    // let pd = this.products.find(data => data.id === pid)
+                    let pd = this.products.find(data => data.id === pid)
                     // console.log(pd);
-                    this.carts.push({
-                        id: Date.now(),
-                        pid:pid,
+                    this.carts.push(pd);
+                    // this.carts.push({
+                        // id: Date.now(),
+                        // pid:pid,
                         // title: pd.title,
                         // price: pd.price
-                    });
+                    // });
                 }
             }
         }).mount('#app');
