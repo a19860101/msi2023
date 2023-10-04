@@ -20,6 +20,7 @@
                     {{cart.price}}
                 </div>
             </div>
+            <a href="#" @click="clearCart()" v-if="carts.length != 0" class="px-2 py-5 bg-red-400 rounded-lg">清空購物車</a>
         </div>
         <div class="container flex flex-wrap mx-auto">
             <div v-for="product,idx in products" class="lg:w-1/4 sm:w-1/2 w-full p-4">
@@ -65,6 +66,11 @@
                         // title: pd.title,
                         // price: pd.price
                     // });
+                },
+                clearCart(){
+                    if(confirm('確認清空購物車嗎？')){
+                        this.carts.length = 0;
+                    }
                 }
             }
         }).mount('#app');
