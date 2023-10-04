@@ -6,14 +6,25 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .cart {
+            transition: 300ms;
 
+        }
+        .active {
+            transform: translateX(0)!important;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <nav class="p-5 bg-zinc-900">
-            <a href="#" class="text-zinc-50">購物車</a>
+            <a href="#" class="text-zinc-50" @click="is_open = !is_open">購物車</a>
         </nav>
-        <div class="w-[400px] h-screen bg-zinc-300 right-0 top-0 fixed p-3">
+        {{open}}
+        <div
+            :class="{active:is_open}"
+            class="cart w-[400px] h-screen bg-zinc-300 right-0 top-0 fixed p-3 translate-x-full">
             <div v-for="cart,idx in carts" class="py-2">
                 <h3>{{cart.title}}</h3>
                 <div>
@@ -49,7 +60,8 @@
             data(){
                 return{
                     products: '',
-                    carts:[]
+                    carts:[],
+                    is_open: false
                 }
             },
             created(){
@@ -80,6 +92,9 @@
                     if(confirm('確認移除商品嗎？')){
                         this.carts.splice(idx,1);
                     }
+                },
+                openCart(){
+
                 }
             },
             computed:{
