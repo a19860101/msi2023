@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 </head>
 <body>
+    <div id="app">
+        <app-title>hello slo2342423t</app-title>
+        <!-- <appTitle>hello</appTitle> -->
+        <!-- <AppTitle>323242</AppTitle> -->
+    </div>
     <script type="module">
-        import Typhoon from './js/Test.js';
-        console.log(Typhoon);
+        // import Typhoon from './js/Test.js';
+        // console.log(Typhoon);
+        import Title from './js/Title.js';
+        Vue.createApp({
+            data(){
+                return {
+
+                }
+            },
+            components:{
+                'app-title':Title
+                // 'appTitle':Title
+                // 'AppTitle':Title
+            }
+        }).mount('#app')
     </script>
 </body>
 </html>
