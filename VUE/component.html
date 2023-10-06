@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <app-nav></app-nav>
-        <app-title></app-title>
+        <app-title>uuuuu</app-title>
     </div>
     <script>
         let app = Vue.createApp({
@@ -21,7 +21,7 @@
             }
         });
         app.component('app-title',{
-            template:`<h1>{{title}}</h1>`,
+            template:`<h1><slot /></h1>`,
             data(){
                 return {
                     title: 'hello component'
