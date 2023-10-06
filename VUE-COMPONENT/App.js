@@ -1,5 +1,5 @@
 import Btn from './components/Btn.js';
-import Nav from './components/Nav.js';
+import AppNav from './components/Nav.js';
 export default {
     data(){
         return {
@@ -8,7 +8,7 @@ export default {
     },
     components:{
         // 'Btn':Btn
+        AppNav,
         Btn,
-        Nav
     }
 }
