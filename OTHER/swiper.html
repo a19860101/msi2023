@@ -31,6 +31,12 @@
       <div class="swiper-slide">
         <img src="https://picsum.photos/id/23/1200/600" alt="">
       </div>
+      <div class="swiper-slide">
+        <img src="https://picsum.photos/id/24/1200/600" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://picsum.photos/id/25/1200/600" alt="">
+      </div>
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
@@ -47,10 +53,11 @@
       // Optional parameters
       // direction: 'h',
       loop: true,
-
+      effect: 'cube',
       // If we need pagination
       pagination: {
         el: '.swiper-pagination',
+        dynamicBullets: true
       },
 
       // Navigation arrows
@@ -60,9 +67,9 @@
       },
 
       // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
+      // scrollbar: {
+        // el: '.swiper-scrollbar',
+      // },
     });
   </script>
 </body>
