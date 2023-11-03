@@ -18,24 +18,108 @@
         svg {
             width: 100%;
         }
-        section {
-            height: 400px;
+        #first {
             width: 100%;
-            background-color: #0099ff;
+            background-color: #09f;
             position: relative;
+            z-index: 10;
+        }
+        #first::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%230099ff" fill-opacity="1" d="M0,64L34.3,80C68.6,96,137,128,206,122.7C274.3,117,343,75,411,53.3C480,32,549,32,617,53.3C685.7,75,754,117,823,112C891.4,107,960,53,1029,53.3C1097.1,53,1166,107,1234,138.7C1302.9,171,1371,181,1406,186.7L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 100%;
+        }
+        .container {
+            width:min(1200px,90%);
+            margin-inline: auto;
+            display: flex;
+            /* height: 400px; */
+            gap:30px;
+            padding-block: 100px;
+        }
+        .col {
+            flex:1 0 0;
+
+        }
+        #second {
+            padding-top: 200px;
+            background-color: #fa0;
+            position: relative;
+            z-index: 9;
+        }
+        #second::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffaa00" fill-opacity="1" d="M0,64L34.3,80C68.6,96,137,128,206,122.7C274.3,117,343,75,411,53.3C480,32,549,32,617,53.3C685.7,75,754,117,823,112C891.4,107,960,53,1029,53.3C1097.1,53,1166,107,1234,138.7C1302.9,171,1371,181,1406,186.7L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 100%;
         }
     </style>
 </head>
 <body>
-    <section>
+    <section id="first">
         <div class="container">
-            <h2>title</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dicta laborum porro molestiae tempore numquam eaque recusandae quae laboriosam itaque, obcaecati ut nobis esse! Obcaecati suscipit doloremque deleniti consequatur quis.
-            </p>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dicta laborum porro molestiae tempore numquam eaque recusandae quae laboriosam itaque, obcaecati ut nobis esse! Obcaecati suscipit doloremque deleniti consequatur quis.
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dicta laborum porro molestiae tempore numquam eaque recusandae quae laboriosam itaque, obcaecati ut nobis esse! Obcaecati suscipit doloremque deleniti consequatur quis.
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dicta laborum porro molestiae tempore numquam eaque recusandae quae laboriosam itaque, obcaecati ut nobis esse! Obcaecati suscipit doloremque deleniti consequatur quis.
+                </p>
+            </div>
         </div>
-        <div class="wave">
+        <!-- <div class="wave">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,64L34.3,80C68.6,96,137,128,206,122.7C274.3,117,343,75,411,53.3C480,32,549,32,617,53.3C685.7,75,754,117,823,112C891.4,107,960,53,1029,53.3C1097.1,53,1166,107,1234,138.7C1302.9,171,1371,181,1406,186.7L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
+        </div> -->
+    </section>
+    <section id="second">
+        <div class="container">
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni, in, voluptates recusandae quasi eligendi eum exercitationem aliquam nobis asperiores eaque similique accusamus fuga ducimus neque tempora. Ipsum, quod eum.
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni, in, voluptates recusandae quasi eligendi eum exercitationem aliquam nobis asperiores eaque similique accusamus fuga ducimus neque tempora. Ipsum, quod eum.
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni, in, voluptates recusandae quasi eligendi eum exercitationem aliquam nobis asperiores eaque similique accusamus fuga ducimus neque tempora. Ipsum, quod eum.
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni, in, voluptates recusandae quasi eligendi eum exercitationem aliquam nobis asperiores eaque similique accusamus fuga ducimus neque tempora. Ipsum, quod eum.
+                </p>
+            </div>
         </div>
     </section>
 </body>
