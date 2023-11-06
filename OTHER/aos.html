@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            width: 100%;
+            position: fixed;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: #545;
+            gap:30px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header {
+            height: 100vh;
+            background-color: #712;
+            background-image: url('https://picsum.photos/id/92/1600/1000');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        section {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            width: min(1200px , 90%);
+            gap:30px;
+            margin-inline: auto;
+            align-items: center;
+        }
+        .col {
+            flex: 1 0 0;
+        }
+        #about {background-color: rgb(88, 190, 178);}
+        #service {background-color: #ace;}
+        #contact {background-color: #0ce;}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">home</a>
+        <a href="#about">about</a>
+        <a href="#service">service</a>
+        <a href="#contact">contact</a>
+    </nav>
+    <header></header>
+    <section id="about">
+        <div class="container">
+            <div class="col" data-aos="zoom-in" data-aos-delay="100">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="zoom-in" data-aos-delay="500">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="zoom-in" data-aos-delay="900">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="service">
+        <div class="container">
+            <div class="col" data-aos="fade-right">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="fade-left">
+                <img src="https://picsum.photos/id/77/800" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="col" data-aos="fade-right">
+                <img src="https://picsum.photos/id/96/800" alt="">
+            </div>
+            <div class="col" data-aos="fade-left">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="col" data-aos="flip-left" data-aos-delay="100">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="flip-left" data-aos-delay="500">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+            <div class="col" data-aos="flip-left" data-aos-delay="900">
+                <h2>title</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
