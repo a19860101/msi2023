@@ -35,11 +35,10 @@
         }
         header {
             height: 100vh;
-            background-color: #712;
-            background-image: url('https://picsum.photos/id/92/1600/1000');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            clip-path:polygon(0 0,100% 0 , 100% calc(100% - 10vw),0 100%);
+        }
+        section:nth-of-type(1){
+            margin-top: -10vw;
         }
         section {
             width: 100%;
@@ -75,7 +74,9 @@
         <a href="#service">service</a>
         <a href="#contact">contact</a>
     </nav>
-    <header></header>
+    <header>
+        <img src="https://picsum.photos/id/92/1600/1000" alt="" class="cover">
+    </header>
     <section id="about">
         <div class="container">
             <div class="col" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="100">
@@ -153,11 +154,17 @@
             // anchorPlacement: 'center-bottom'
         });
         var image = document.getElementsByClassName('thumbnail');
+        let cover = document.querySelector('.cover')
         new simpleParallax(image,{
             orientation: 'right',
             delay: 1,
             scale:2
         });
+        new simpleParallax(cover,{
+            delay: .6,
+            orientation:'down',
+            scale:1.5
+        })
     </script>
 </body>
 </html>
