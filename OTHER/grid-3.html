@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 200px);
+            grid-template-areas:
+            "header header header header header"
+            "section section section section section"
+            "aside aside aside aside aside"
+            "footer footer footer footer footer"
+            "menu menu menu menu menu"
+            ;
+        }
+        @media(min-width: 1200px){
+            main {
+                grid-template-areas:
+                "menu menu menu menu menu"
+                "header header header header header"
+                "aside aside section section section"
+                "footer footer footer footer footer"
+            ;
+            }
+        }
+        nav {
+            grid-area: menu;
+            background-color: red;
+        }
+        header {
+            grid-area: header;
+            background-color: blue;
+        }
+        aside {
+            grid-area: aside;
+            background: pink;
+        }
+        section {
+            grid-area: section;
+            background-color: orange;
+        }
+        footer {
+            grid-area: footer;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav></nav>
+        <header></header>
+        <aside></aside>
+        <section></section>
+        <footer></footer>
+    </main>
+</body>
+</html>
