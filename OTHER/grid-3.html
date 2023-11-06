@@ -5,57 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         main {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 200px);
+            /* grid-template-rows: repeat(5, 200px); */
             grid-template-areas:
-            "header header header header header"
-            "section section section section section"
-            "aside aside aside aside aside"
-            "footer footer footer footer footer"
             "menu menu menu menu menu"
+            "header header header header header"
+            "aside aside aside aside aside"
+            "section section section section section"
+            "footer footer footer footer footer"
             ;
+        }
+       
+        nav {
+            grid-area: menu;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 60px;
+            position: fixed;
+            width: 100%;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+        header {
+            grid-area: header;
+            background: url('https://picsum.photos/id/43/1600/900') no-repeat center fixed;
+            background-size: cover;
+            aspect-ratio: 16 / 9;
+            max-height: 600px;
+            width: 100%;
+        }
+        aside {
+            grid-area: aside;
+            background: pink;
+            padding: 30px;
+        }
+        aside ul {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        
+        section {
+            grid-area: section;
+            background-color: orange;
+            padding: 30px;
+        }
+        footer {
+            grid-area: footer;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding-block:30px;
         }
         @media(min-width: 1200px){
             main {
                 grid-template-areas:
                 "menu menu menu menu menu"
                 "header header header header header"
-                "aside aside section section section"
+                "aside section section section section"
                 "footer footer footer footer footer"
             ;
             }
-        }
-        nav {
-            grid-area: menu;
-            background-color: red;
-        }
-        header {
-            grid-area: header;
-            background-color: blue;
-        }
-        aside {
-            grid-area: aside;
-            background: pink;
-        }
-        section {
-            grid-area: section;
-            background-color: orange;
-        }
-        footer {
-            grid-area: footer;
-            background: #000;
+            aside ul {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <main>
-        <nav></nav>
-        <header></header>
-        <aside></aside>
-        <section></section>
-        <footer></footer>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+        <header>
+            <img src="https://picsum.photos/id/1600/900" alt="">
+        </header>
+        <aside>
+            <ul>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+            </ul>
+        </aside>
+        <section>
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga natus illo iste in excepturi nesciunt inventore recusandae nam, architecto itaque non autem? Deserunt quam accusantium repellendus, iure possimus quasi odit?
+            </p>
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, impedit sint consequuntur vitae cumque eligendi fuga perspiciatis mollitia consequatur dicta soluta reprehenderit explicabo, fugiat accusantium vero! Expedita ab corporis eligendi?
+            </p>
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, impedit sint consequuntur vitae cumque eligendi fuga perspiciatis mollitia consequatur dicta soluta reprehenderit explicabo, fugiat accusantium vero! Expedita ab corporis eligendi?
+            </p>
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, impedit sint consequuntur vitae cumque eligendi fuga perspiciatis mollitia consequatur dicta soluta reprehenderit explicabo, fugiat accusantium vero! Expedita ab corporis eligendi?
+            </p>
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, impedit sint consequuntur vitae cumque eligendi fuga perspiciatis mollitia consequatur dicta soluta reprehenderit explicabo, fugiat accusantium vero! Expedita ab corporis eligendi?
+            </p>
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, impedit sint consequuntur vitae cumque eligendi fuga perspiciatis mollitia consequatur dicta soluta reprehenderit explicabo, fugiat accusantium vero! Expedita ab corporis eligendi?
+            </p>
+
+        </section>
+        <footer>
+            2023&copy;All Rights Reserved
+        </footer>
     </main>
 </body>
 </html>
