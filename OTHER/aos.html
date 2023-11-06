@@ -6,6 +6,8 @@
     <title>Document</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
 
     <style>
         html {
@@ -60,6 +62,10 @@
         #about {background-color: rgb(88, 190, 178);}
         #service {background-color: #ace;}
         #contact {background-color: #0ce;}
+        .banner {
+            height: 400px;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -91,6 +97,9 @@
                 </p>
             </div>
         </div>
+    </section>
+    <section class="banner">
+        <img src="https://picsum.photos/id/77/1600/800" alt="" class="thumbnail">
     </section>
     <section id="service">
         <div class="container">
@@ -142,6 +151,12 @@
         AOS.init({
             offset:0,
             // anchorPlacement: 'center-bottom'
+        });
+        var image = document.getElementsByClassName('thumbnail');
+        new simpleParallax(image,{
+            orientation: 'right',
+            delay: 1,
+            scale:2
         });
     </script>
 </body>
