@@ -25,6 +25,7 @@
             display: flex;
             background-color: #545;
             gap:30px;
+            z-index: 99999;
         }
         nav a {
             color: #fff;
@@ -71,19 +72,19 @@
     <header></header>
     <section id="about">
         <div class="container">
-            <div class="col" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="100">
                 <h2>title</h2>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
                 </p>
             </div>
-            <div class="col" data-aos="zoom-in" data-aos-delay="500">
+            <div class="col" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="500">
                 <h2>title</h2>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
                 </p>
             </div>
-            <div class="col" data-aos="zoom-in" data-aos-delay="900">
+            <div class="col" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="900">
                 <h2>title</h2>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorum autem quasi consequatur quibusdam aliquam officiis incidunt quae debitis nobis repellendus veritatis! Neque et, deleniti officia aut obcaecati sunt debitis.
@@ -138,7 +139,10 @@
         </div>
     </section>
     <script>
-        AOS.init();
+        AOS.init({
+            offset:0,
+            // anchorPlacement: 'center-bottom'
+        });
     </script>
 </body>
 </html>
