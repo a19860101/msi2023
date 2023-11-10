@@ -6,7 +6,6 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 </head>
 <body>
     <section class="border-b-2 border-zinc-300 py-3">
@@ -55,8 +54,18 @@
         <img src="https://picsum.photos/id/76/1600/900" alt="" class="w-full h-full object-cover">
     </header>
     <section>
-        <div class="container mx-auto flex flex-wrap py-3">
-            <div class="w-1/3 p-3">
+        <div class="container mx-auto flex space-x-6 py-6">
+            <div class="w-1/3">
+                <figure class="relative aspect-video group">
+                    <img src="https://picsum.photos/id/92/800/600" alt="" class="w-full h-full object-cover">
+                    <figcaption class="absolute inset-0 m-auto bg-zinc-300/80 group-hover:bg-amber-300/20 duration-300 flex flex-col justify-center pl-5">
+                        <div class="text-xs">New Collection</div>
+                        <h3 class="text-3xl font-bold">Lamp</h3>
+                        <a href="#" class="text-xs underline group-hover:text-white duration-300">Shop Now</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="w-1/3">
                 <figure class="relative aspect-video">
                     <img src="https://picsum.photos/id/92/800/600" alt="" class="w-full h-full object-cover">
                     <figcaption class="absolute inset-0 m-auto bg-zinc-300/80 hover:bg-zinc-300/0 duration-300 flex flex-col justify-center pl-5">
@@ -66,17 +75,7 @@
                     </figcaption>
                 </figure>
             </div>
-            <div class="w-1/3 p-3">
-                <figure class="relative aspect-video">
-                    <img src="https://picsum.photos/id/92/800/600" alt="" class="w-full h-full object-cover">
-                    <figcaption class="absolute inset-0 m-auto bg-zinc-300/80 hover:bg-zinc-300/0 duration-300 flex flex-col justify-center pl-5">
-                        <div class="text-xs">New Collection</div>
-                        <h3 class="text-3xl font-bold">Lamp</h3>
-                        <a href="#" class="text-xs underline">Shop Now</a>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="w-1/3 p-3">
+            <div class="w-1/3">
                 <figure class="relative aspect-video">
                     <img src="https://picsum.photos/id/92/800/600" alt="" class="w-full h-full object-cover">
                     <figcaption class="absolute inset-0 m-auto bg-zinc-300/80 hover:bg-zinc-300/0 duration-300 flex flex-col justify-center pl-5">
@@ -111,5 +110,120 @@
            
         </div>
     </section>
+    <section class="py-24">
+        <div class="container mx-auto flex space-x-4">
+            <div class="w-1/4">
+                <div>
+                    <figure class="relative group">
+                        <img src="https://picsum.photos/id/43/400/500" alt="">
+                        <figcaption class="absolute flex flex-col group-hover:bg-zinc-400 duration-500 inset-0 m-auto items-center justify-center space-y-3">
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-regular fa-heart"></i></a>
+                        </figcaption>
+                    </figure>
+                    <div>
+                        <h3>Pellensque lacuile sefs</h3>
+                        <div class="flex justify-between">
+                            <span>
+                                $392 <del class="text-xs text-zinc-300">$450</del>
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4">
+                <div>
+                    <figure class="relative group">
+                        <img src="https://picsum.photos/id/43/400/500" alt="">
+                        <figcaption class="absolute flex flex-col group-hover:bg-zinc-400 duration-500 inset-0 m-auto items-center justify-center space-y-3">
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-regular fa-heart"></i></a>
+                        </figcaption>
+                    </figure>
+                    <div>
+                        <h3>Pellensque lacuile sefs</h3>
+                        <div class="flex justify-between">
+                            <span>
+                                $392 <del class="text-xs text-zinc-300">$450</del>
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4">
+                <div>
+                    <figure class="relative group">
+                        <img src="https://picsum.photos/id/43/400/500" alt="">
+                        <figcaption class="absolute flex flex-col group-hover:bg-zinc-400 duration-500 inset-0 m-auto items-center justify-center space-y-3">
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-regular fa-heart"></i></a>
+                        </figcaption>
+                    </figure>
+                    <div>
+                        <h3>Pellensque lacuile sefs</h3>
+                        <div class="flex justify-between">
+                            <span>
+                                $392 <del class="text-xs text-zinc-300">$450</del>
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4">
+                <div>
+                    <figure class="relative group">
+                        <img src="https://picsum.photos/id/43/400/500" alt="">
+                        <figcaption class="absolute flex flex-col group-hover:bg-zinc-400 duration-500 inset-0 m-auto items-center justify-center space-y-3">
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#" class="opacity-0 translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 duration-500 inline-block w-9 h-9 bg-white flex items-center justify-center hover:bg-amber-300 rounded-full"><i class="fa-regular fa-heart"></i></a>
+                        </figcaption>
+                    </figure>
+                    <div>
+                        <h3>Pellensque lacuile sefs</h3>
+                        <div class="flex justify-between">
+                            <span>
+                                $392 <del class="text-xs text-zinc-300">$450</del>
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                                <i class="fa-regular fa-star fa-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="w-64 h-64 bg-amber-400 group">
+        <a href="#" class="group-hover:text-6xl hover:text-rose-400">link</a>
+    </div>
 </body>
 </html>
