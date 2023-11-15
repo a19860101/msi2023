@@ -24,7 +24,6 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            display: block;
         }
 
         .nav-menu {
@@ -42,6 +41,8 @@
 
         .nav-link {
             padding: 15px;
+            display: block;
+
         }
 
         .dropdown-menu {
@@ -51,9 +52,7 @@
             top: 100%;
             left: 0;
             padding: 30px;
-        }
 
-        .dropdown-menu {
             opacity: 0;
             visibility: hidden;
             transition: 500ms;
@@ -66,6 +65,30 @@
         .dropdown-link:hover {
             color: #f00;
         }
+        img {
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            /* width: min(900px,90%); */
+            width: 60%;
+            margin-inline: auto;
+        }
+        .col-link {
+            width: 80%;
+            display: flex;
+
+        }
+        .col-link div {
+            width: 50%;
+        }
+        .col-link a {
+            display: block;
+            
+        }
+        .col-img {
+            width: 20%;
+        }
     </style>
 </head>
 
@@ -75,12 +98,28 @@
             <li><a href="#" class="nav-link">link</a></li>
             <li><a href="#" class="nav-link">link</a>
                 <div class="dropdown-menu">
-                    <a href="#" class="dropdown-link">sub link</a>
-                    <a href="#" class="dropdown-link">sub link</a>
-                    <a href="#" class="dropdown-link">sub link</a>
-                    <a href="#" class="dropdown-link">sub link</a>
-                    <a href="#" class="dropdown-link">sub link</a>
-                    <a href="#" class="dropdown-link">sub link</a>
+                    <div class="container">
+                        <div class="col-link">
+                            <div>
+                                <a href="#" class="dropdown-link">sub link</a>
+                                <a href="#" class="dropdown-link">sub link</a>
+                                <a href="#" class="dropdown-link">sub link</a>
+                                <a href="#" class="dropdown-link">sub link</a>
+                                <a href="#" class="dropdown-link">sub link</a>
+                            </div>
+                            <div>
+                                <a href="#" class="dropdown-link">sub link</a>
+                                <a href="#" class="dropdown-link">sub link</a>
+                                <a href="#" class="dropdown-link">sub link</a>
+                                <a href="#" class="dropdown-link">sub link</a>
+                                <a href="#" class="dropdown-link">sub link</a>
+                            </div>
+                        </div>
+                        <div class="col-img">
+                            <img src="https://picsum.photos/id/87/800/600" alt="">
+                        </div>
+                    </div>
+                    
 
                 </div>
             </li>
