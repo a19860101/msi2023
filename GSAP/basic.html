@@ -17,7 +17,18 @@
     <div class="box"></div>
     <script>
         // gsap.to(".box", { rotation: 180, x: 500, duration: 10 });
-        gsap.from('.box',{rotate:360,scale:0,opacity:0,duration:3});
+        // gsap.from('.box',{rotate:360,scale:0,opacity:0,duration:3});
+        // gsap.fromTo('.box',{x:-500},{x:400,duration:5});
+
+        gsap.to('.box',{
+            // y:500,
+            rotate:360,
+            delay: 0,
+            repeat: -1,
+            yoyo:true,
+            duration:1,
+
+        })
     </script>
 </body>
 </html>
