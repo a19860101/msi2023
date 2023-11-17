@@ -8,12 +8,13 @@
 
 </head>
 <body>
+    <a href="#" class="start">start</a>
     <div class="container">
         <h1>HELLO GSAP</h1>
         <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium eveniet earum esse assumenda? Fugiat provident alias, omnis ipsum praesentium beatae fugit dignissimos sint laudantium architecto, consequuntur impedit velit quibusdam ipsa!
         </p>
-        <a href="#">GO</a>
+        <a href="#" class="go">GO</a>
     </div>
     <script>
         // let tl = gsap.timeline();
@@ -21,10 +22,20 @@
         // .from('p',{opacity:0,duration:1})
         // .from('a',{opacity:0,duration:1})
         // let tl = gsap.timeline();
-        gsap.timeline()
-        .from('h1',{opacity:0,duration:1})
-        .from('p',{opacity:0,duration:1})
-        .from('a',{opacity:0,duration:1})
+        let animation = gsap.timeline()
+        .to('.start',{opacity:0})
+        .from('h1',{opacity:0,x:100,duration:1})
+        .from('p',{opacity:0,y:100,duration:1})
+        .from('.go',{opacity:0,x:50,y:50,duration:1})
+
+        let start = document.querySelector('.start');
+        animation.pause();
+        start.onclick = function(){
+            animation.play();
+        }
+
+        // play(),pause(),reverse(),restart()
+
     </script>
 </body>
 </html>
