@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header,section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        #first {
+            background-color: #ccc;
+        }
+        #first img {
+            width: 400px;
+            position: absolute;
+        }
+        #first .right {
+            top: 10%;
+            right: 15%;
+            z-index: 20;
+        }
+        #first .left {
+            bottom: 10%;
+            left:15%;
+            z-index: 10;
+        }
+        #first .title {
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+            inset:0;
+            margin: auto;
+            font-size: 8rem;
+            z-index: 15;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PARALLAX 視差滾動</h1>
+    </header>
+    <section id="first">
+        <img src="images/01.png" alt="" class="right">
+        <img src="images/02.png" alt="" class="left">
+        <h2 class="title">Air Pods Pro</h2>
+    </section>
+</body>
+</html>
