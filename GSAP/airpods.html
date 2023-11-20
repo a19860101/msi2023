@@ -30,11 +30,14 @@
             top: 10%;
             right: 15%;
             z-index: 20;
+            filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+
         }
         #first .left {
             bottom: 10%;
             left:15%;
             z-index: 10;
+            filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
         }
         #first .title {
             position: absolute;
@@ -44,6 +47,7 @@
             margin: auto;
             font-size: 8rem;
             z-index: 15;
+            text-shadow: 4px 4px 10px rgb(0 0 0 / .5);
         }
         footer {
             height: 100vh;
@@ -70,8 +74,8 @@
                 scrub: 3,
             }
         })
-        .from('.right',{y:-200})
-        .from('.left',{y:200},0)
+        .from('.right',{y:-200,scale:0.8})
+        .from('.left',{y:200,scale:0.8},0)
         .from('.title',{scale:0,opacity:0},0)
     </script>
 </body>
