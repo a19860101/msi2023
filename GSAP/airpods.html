@@ -45,7 +45,9 @@
             font-size: 8rem;
             z-index: 15;
         }
-
+        footer {
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
@@ -57,5 +59,20 @@
         <img src="images/02.png" alt="" class="left">
         <h2 class="title">Air Pods Pro</h2>
     </section>
+    <footer></footer>
+    <script>
+        let tl1 = gsap.timeline({
+            scrollTrigger:{
+                trigger:'#first',
+                markers: true,
+                start: 'top 50%',
+                end: '+=50%',
+                scrub: 3,
+            }
+        })
+        .from('.right',{y:-200})
+        .from('.left',{y:200},0)
+        .from('.title',{scale:0,opacity:0},0)
+    </script>
 </body>
 </html>
