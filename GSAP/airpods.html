@@ -21,6 +21,23 @@
             width: 100%;
             height: 100vh;
         }
+        h1 {
+            font-size: 6rem;
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            inset:0;
+            margin: auto;
+        }
+        .line {
+            width: 2px;
+            height: 0;
+            background-color: #000;
+            position: absolute;
+            top: 0%;
+            left: 10%;
+            z-index: 999;
+        }
         img {
             width: 400px;
             position: absolute;
@@ -82,11 +99,22 @@
         footer {
             height: 100vh;
         }
+        .loading {
+            position: fixed;
+            width: 0;
+            height: 15px;
+            top: 0;
+            left: 0;
+            background-color: crimson;
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
+    <div class="loading"></div>
     <header>
         <h1>PARALLAX 視差滾動</h1>
+        <div class="line"></div>
     </header>
     <section id="first">
         <img src="images/01.png" alt="" class="right">
@@ -98,12 +126,44 @@
         <img src="images/02.png" alt="" class="left">
         <h2 class="title">Air Pods Pro</h2>
     </section>
-    <footer></footer>
+    <footer>
+        asdf
+    </footer>
     <script>
+        // let tl = gsap.timeline();
+        // tl.to('.loading',{width:'100%'})
+        // ScrollTrigger.create({
+        //     animation: tl,
+        //     trigger:'header',
+        //     endTrigger:'footer',
+        //     markers: true,
+        //     scrub: 1,
+        //     start: 'top top',
+        //     end: 'top top'
+        // })
+         gsap.timeline({
+            scrollTrigger:{
+                trigger:'header',
+                endTrigger:'footer',
+                markers: true,
+                start: 'top top',
+                end: 'top top',
+                scrub: 1,
+            }
+        }).to('.loading',{width:'100%'})
+        gsap.timeline({
+            scrollTrigger:{
+                trigger:'header',
+                // markers: true,
+                start: 'top',
+                scrub: 1,
+            }
+        })
+        .to('h1',{scale:0})
         gsap.timeline({
             scrollTrigger:{
                 trigger:'#first',
-                markers: true,
+                // markers: true,
                 start: 'top 50%',
                 end: '+=50%',
                 scrub: 3,
@@ -116,7 +176,7 @@
         gsap.timeline({
             scrollTrigger:{
                 trigger:'#second',
-                markers: true,
+                // markers: true,
                 start: 'top 50%',
                 end: '+=50%',
                 scrub: 3,
