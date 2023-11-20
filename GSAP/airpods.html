@@ -13,42 +13,72 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+        body {
+            overflow-x: hidden;
+        }
         header,section {
             position: relative;
             width: 100%;
             height: 100vh;
         }
-        #first {
-            background-color: #ccc;
-        }
-        #first img {
+        img {
             width: 400px;
             position: absolute;
         }
-        #first .right {
-            top: 10%;
-            right: 15%;
-            z-index: 20;
-            filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+        #first {
+            background-color: #ccc;
+            .right {
+                top: 10%;
+                right: 15%;
+                z-index: 20;
+                filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
 
+            }
+            .left {
+                bottom: 10%;
+                left:15%;
+                z-index: 10;
+                filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+            }
+            .title {
+                position: absolute;
+                width: fit-content;
+                height: fit-content;
+                inset:0;
+                margin: auto;
+                font-size: 8rem;
+                z-index: 15;
+                text-shadow: 4px 4px 10px rgb(0 0 0 / .5);
+            }
         }
-        #first .left {
-            bottom: 10%;
-            left:15%;
-            z-index: 10;
-            filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+        #second {
+            background-color: #545;
+            .right {
+                top: 10%;
+                right: 15%;
+                z-index: 20;
+                filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+
+            }
+            .left {
+                bottom: 10%;
+                left:15%;
+                z-index: 10;
+                filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+            }
+            .title {
+                position: absolute;
+                width: fit-content;
+                height: fit-content;
+                inset:0;
+                margin: auto;
+                font-size: 8rem;
+                z-index: 15;
+                text-shadow: 4px 4px 10px rgb(0 0 0 / .5);
+                color: #fff;
+            }
         }
-        #first .title {
-            position: absolute;
-            width: fit-content;
-            height: fit-content;
-            inset:0;
-            margin: auto;
-            font-size: 8rem;
-            z-index: 15;
-            text-shadow: 4px 4px 10px rgb(0 0 0 / .5);
-        }
+        
         footer {
             height: 100vh;
         }
@@ -63,9 +93,14 @@
         <img src="images/02.png" alt="" class="left">
         <h2 class="title">Air Pods Pro</h2>
     </section>
+    <section id="second">
+        <img src="images/01.png" alt="" class="right">
+        <img src="images/02.png" alt="" class="left">
+        <h2 class="title">Air Pods Pro</h2>
+    </section>
     <footer></footer>
     <script>
-        let tl1 = gsap.timeline({
+        gsap.timeline({
             scrollTrigger:{
                 trigger:'#first',
                 markers: true,
@@ -74,9 +109,23 @@
                 scrub: 3,
             }
         })
-        .from('.right',{y:-200,scale:0.8})
-        .from('.left',{y:200,scale:0.8},0)
-        .from('.title',{scale:0,opacity:0},0)
+        .from('#first .right',{y:-200,scale:0.8})
+        .from('#first .left',{y:200,scale:0.8},0)
+        .from('#first .title',{scale:0,opacity:0},0)
+
+        gsap.timeline({
+            scrollTrigger:{
+                trigger:'#second',
+                markers: true,
+                start: 'top 50%',
+                end: '+=50%',
+                scrub: 3,
+            }
+        })
+        .from('#second .right',{x:300,opacity:0})
+        .from('#second .left',{x:-300,opacity:0},0)
+        .from('#second .title',{scale:0,opacity:0},0)
+
     </script>
 </body>
 </html>
